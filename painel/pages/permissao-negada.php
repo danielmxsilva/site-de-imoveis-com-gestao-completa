@@ -1,0 +1,1 @@
+<?php Painel::alert('erro','Você não tem permissão para atualizar está página!')?>

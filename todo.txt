@@ -1,0 +1,124 @@
+fazer a página cadastrar-empreendimento->{
+	-nome-input
+	-tipo-select
+	-preço-mascara
+	-imagem
+}
+
+ir no banco de dados e criar a tabela tb_admin.empreendimentos->{
+	-id AI
+	-nome varchar
+	-tipo varchar
+	-preco varchar
+	-imagem varchar
+}
+
+
+----------------------- AULA 2/8
+
+Fazendo o cadastro do empreendimento no banco->{
+	-pegar os valores do formulário
+	-verificar se a imagem foi adicionada
+	-se foi adicionada verificar se a imagem é valida
+	-subir a imagem
+	-adicionar o conteudo ao banco de dados
+}
+
+----------------------- AULA 3/8
+
+
+Fazendo sistema de ordenação de tabela com ajax(Arrastando e soltando)->{
+	-ir no banco de dados->na tabela tb_admin.empreendimento e adicionar order_id na tabela
+	-adicionar um lastId no order_id
+}
+
+Criando novo link no menu do painel->{
+	-Listar empreendimentos->pagina listar-empreendimentos
+	-Pegar conteudo da página visualizar produtos e adaptar
+	-Deletar empreendimento
+	-Buscar empreendimento
+}
+
+Adicionar jqueryui no meu site->{
+	-jqueryui.com
+	-stable(download)
+	-copiar os arquivos jquery-ui.min/css/js
+	-copiar as images do jquery-ui, criar uma pasta no painel chamada de images e colar as fotos
+}
+
+----------------------- AULA 4/8
+
+Criar o botão visualizar empreendimento->{
+	-Pagina visualizar empreendimento
+}
+
+Colocar borda traçada na box quando começar o evento então->{
+	-start:function(){ var el = $(this); el.find(".box-single-wraper > div:nth-of-type(1).css('border','2px dashed #ccc')")},
+	-update:function()>>>
+}
+
+Pegar a ordem que ficou as boxes dps de mover->{
+	-event,ui - como parametro e->var data = $(this).sortable('serialize');
+	-colocar o item id em cada box
+}
+
+Fazendo o update no banco de dados->{
+	vou fazer via ajax
+	$.ajax({
+		url: '',
+		method: 'post',
+		data: data
+	}).done(function(data){
+		console.log(data);
+	})
+}
+
+----------------------- AULA 5/8
+
+Criar a página visualizar empreendimento->{
+	fazer verificação se existe um parametro id
+}
+
+
+
+SITE DE IMOVEIS
+APLICANDO ROTAS
+
+----------------------- AULA 1/8
+
+Ir no meu index e deletar todo conteúdo até o final
+posso deixar o contador e o update usuarioOnline
+mais eu posso tirar as tags do php e abrir uma só
+
+ir na pasta pages e deletar tudo tmb
+
+dentro da pasta pages criar uma pasta chamada de includes e dentro dela criar o header.php e o footer.php
+no header vou colocar o html da cabeça do site
+no footer o final do html
+
+na pasta pages vou criar o home.php
+colocar um h1 por enquanto
+
+vou na pasta classes e criar uma nova pasta chamada controller,nova pasta chamada views, nova pasta models
+
+------------
+
+ir no index e criar uma variavel chamada homeController e instanciar o homeController() no namespace controller
+
+ir no controller e criar o arquivo homeController.php
+
+colocar o namespace controller
+
+criar a classe homeController
+
+criar a função publica index()
+
+na pasta views criar o mainView.php
+
+colocar o namespace Views
+
+criar a classe mainView e a função render e no final morrer o script
+
+dentro da função render vou passar alguns parametros como $fileName,$header = 'pages/includes/header.php',$footer = 'pages/includes/footer.php'
+
+dentro da função render eu ainda vou incluir o $header e o $footer no final e no meio vou incluir o $fileName na pasta pages/
